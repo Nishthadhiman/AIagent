@@ -1,1 +1,271 @@
-<h1>Welcome to AI Agents Page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Freelancing Vibes | Autonomous AI Solutions</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #05070a;
+            --card-bg: #0f1117;
+            --accent-color: #00f2ff;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+            --gradient: linear-gradient(135deg, #00f2ff 0%, #007bff 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-main); 
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .bg-glow {
+            position: fixed; top: 0; right: 0; width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(0, 242, 255, 0.15) 0%, transparent 70%);
+            z-index: -1; filter: blur(80px);
+        }
+
+        header {
+            padding: 20px 8%;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(5, 7, 10, 0.8); backdrop-filter: blur(12px);
+            position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; gap: 10px; }
+        .logo span { color: var(--accent-color); }
+        nav a { color: var(--text-dim); text-decoration: none; margin-left: 30px; font-weight: 600; transition: 0.3s; }
+        nav a:hover { color: var(--accent-color); }
+
+        /* Sections */
+        .section-title { padding: 80px 8% 40px; text-align: center; }
+        .hero { padding: 120px 8% 60px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+        .badge { background: rgba(0, 242, 255, 0.1); border: 1px solid var(--accent-color); color: var(--accent-color); padding: 6px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: 600; margin-bottom: 25px; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 25px; max-width: 900px; }
+        .hero h1 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { color: var(--text-dim); font-size: 1.2rem; max-width: 650px; margin-bottom: 40px; }
+        
+        .btn { padding: 16px 35px; border-radius: 12px; font-weight: 700; text-decoration: none; transition: 0.3s; border: none; cursor: pointer; display: inline-block; }
+        .btn-main { background: var(--gradient); color: #000; }
+        .btn-outline { border: 1px solid #334155; color: white; background: transparent; }
+
+        .stats-bar { display: flex; justify-content: space-around; padding: 40px 8%; background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .stat-item h2 { color: var(--accent-color); font-size: 2rem; }
+        .stat-item p { color: var(--text-dim); font-size: 0.9rem; }
+
+        .agents-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 0 8% 80px; }
+        .agent-card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.05); padding: 40px; border-radius: 24px; transition: 0.4s; }
+        .agent-card:hover { border-color: var(--accent-color); }
+        .agent-card i { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 25px; display: block; }
+        .agent-card h3 { font-size: 1.4rem; margin-bottom: 15px; }
+        .agent-card p { color: var(--text-dim); font-size: 0.95rem; }
+
+        /* FAQ Section FIX */
+        .faq-section { padding: 100px 8%; max-width: 900px; margin: 0 auto; }
+        .faq-item { background: var(--card-bg); margin-bottom: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
+        .faq-question { padding: 22px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.1rem; }
+        .faq-answer { 
+            max-height: 0; 
+            overflow: hidden; 
+            transition: all 0.4s cubic-bezier(0, 1, 0, 1); 
+            background: rgba(255,255,255,0.01);
+        }
+        .faq-answer-content { padding: 0 22px 22px 22px; color: var(--text-dim); font-size: 1rem; line-height: 1.7; }
+        .faq-item.active { border-color: var(--accent-color); }
+        .faq-item.active .faq-answer { max-height: 1000px; transition: all 0.4s cubic-bezier(1, 0, 1, 0); }
+
+        /* Contact Form */
+        .contact-section { padding: 100px 8%; text-align: center; }
+        .contact-form { max-width: 600px; margin: 40px auto 0; text-align: left; background: var(--card-bg); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text-dim); }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; outline: none; }
+
+        footer { padding: 50px 8%; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-dim); }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <header>
+        <div class="logo"><i class="fas fa-robot"></i> Freelancing<span>Vibes</span></div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="#agents">Solutions</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="badge">Trusted AI Automation Partner</div>
+            <h1>Automate Operations with <span>Intelligent AI Agents</span></h1>
+            <p>We deploy autonomous agents for calling, lead generation, and SEO, giving your business 24/7 scalability.</p>
+            <div class="btn-group" style="display:flex; gap:15px;">
+                <a href="#contact" class="btn btn-main">Get Free Consultation</a>
+                <a href="#agents" class="btn btn-outline">Explore Solutions</a>
+            </div>
+        </section>
+
+        <section class="stats-bar">
+            <div class="stat-item"><h2>24/7</h2><p>Agent Activity</p></div>
+            <div class="stat-item"><h2>3.5x</h2><p>Leads Increase</p></div>
+            <div class="stat-item"><h2>100%</h2><p>Automated</p></div>
+        </section>
+
+        <!-- Agents Grid -->
+        <section class="agents-grid" id="agents">
+            <div class="section-title" style="grid-column: 1 / -1;">
+                <h2>Our Specialized AI Workforce</h2>
+            </div>
+            <div class="agent-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>AI Voice Calling</h3>
+                <p>Human-like voice bots for cold outreach and automated follow-ups.</p>
+            </div>
+            <div class="agent-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Outreach AI</h3>
+                <p>Niche-based scraping and personalized automated email sequences.</p>
+            </div>
+            <div class="agent-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>SEO Competitor Bot</h3>
+                <p>Data-driven strategies to outrank competitors using technical AI analysis.</p>
+            </div>
+            <div class="agent-card">
+                <i class="fas fa-search"></i>
+                <h3>Backlink Finder AI</h3>
+                <p>Identify high-authority guest post opportunities and perform deep competitor backlink auditing in real-time.</p>
+                <a href="#" class="link">Get SEO Advantage</a>
+            </div>
+        </section>
+
+        <!-- 10 Professional FAQs -->
+        <section class="faq-section" id="faq">
+            <div class="section-title"><h2>Common Questions</h2></div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What exactly is an AI Agent? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">An AI Agent is a specialized software program that uses Large Language Models (LLMs) to perform specific tasks autonomously, such as talking to customers, searching for data, or managing emails without human intervention.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does the AI Calling Agent work? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">Our calling agents use advanced Voice AI to conduct real-time conversations. They can understand intent, answer questions, and qualify leads before pushing the data to your CRM.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is the voice quality natural or robotic? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">We use the latest text-to-speech technology that ensures a human-like tone, including natural pauses and inflections, making the conversation feel professional and fluid.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Which industries can benefit from these agents? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">While our agents are versatile, they excel in Real Estate, Insurance, Solar Energy, SaaS, and Digital Marketing Agencies where lead prospecting is crucial.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What is n8n automation? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">n8n is a powerful workflow automation tool. We use it to connect your AI agents with over 200+ apps like Google Sheets, HubSpot, Slack, and WhatsApp for a seamless experience.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does the Backlink Finder help in SEO? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">Our SEO agent automatically scans thousands of websites to find high-authority guest post opportunities and competitor backlink gaps, saving you hundreds of hours of manual work.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I integrate these with my current CRM? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">Absolutely. We can integrate our agents with any CRM that has an API, including GoHighLevel, HubSpot, Salesforce, and Zoho.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is my business data secure with AI? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">Yes. We prioritize data privacy. All AI workflows are designed to handle data securely, and we do not use your proprietary business data to train public AI models.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How long does it take to set up an agent? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">A basic setup typically takes 3-5 business days. More complex custom workflows with deep CRM integrations may take up to 2 weeks.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do I need technical knowledge to use this? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">Not at all. We handle the technical setup and deployment. You will receive a simplified dashboard or direct lead notifications via email or Slack.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="section-title"><h2>Ready to Automate?</h2></div>
+            <form class="contact-form">
+                <div class="form-group"><label>Name</label><input type="text" placeholder="Your Name"></div>
+                <div class="form-group"><label>Email</label><input type="email" placeholder="email@example.com"></div>
+                <div class="form-group"><label>Agent Required</label>
+                    <select>
+                        <option>Calling Agent</option>
+                        <option>Email Marketing Agent</option>
+                        <option>SEO Agent</option>
+                        <option>Backlink Finder Agent</option>
+                    </select>
+                </div>
+                <div class="form-group"><label>Message</label><textarea rows="4" placeholder="Your Requirements"></textarea></div>
+                <button type="submit" class="btn btn-main" style="width: 100%;">Get Started</button>
+            </form>
+        </section>
+    </main>
+
+    <footer><p>&copy; 2025 FreelancingVibes.online</p></footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                
+                // Toggle current item
+                faqItem.classList.toggle('active');
+                
+                // Change Icon
+                const icon = button.querySelector('i');
+                if (faqItem.classList.contains('active')) {
+                    icon.classList.replace('fa-plus', 'fa-minus');
+                } else {
+                    icon.classList.replace('fa-minus', 'fa-plus');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
