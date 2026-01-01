@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Voice AI Solutions | Human-Like Calling Agents</title>
+    <meta name="description" content="Explore industry-leading AI Voice Agents. 24/7 intelligent cold calling, inbound support, and lead qualification for Real Estate, Dental, and more.">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <style>
+        :root {
+            --bg: #05070a;
+            --card-bg: #0f1117;
+            --accent: #00f2ff;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+            --gradient: linear-gradient(135deg, #00f2ff 0%, #007bff 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; }
+
+        header { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; background: rgba(5, 7, 10, 0.8); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .logo { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: white; }
+        .logo span { color: var(--accent); }
+        
+        .breadcrumbs { padding: 20px 8%; font-size: 0.85rem; color: var(--text-dim); background: rgba(255,255,255,0.02); }
+        .breadcrumbs a { color: var(--accent); text-decoration: none; transition: 0.3s; }
+        .breadcrumbs a:hover { text-decoration: underline; }
+
+        /* Hero Section */
+        .hero { padding: 80px 8% 40px; text-align: center; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 3.8rem); font-weight: 800; line-height: 1.1; margin-bottom: 25px; }
+        .hero h1 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { color: var(--text-dim); font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px; }
+
+        /* Technology Grid */
+        .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 60px 8%; }
+        .tech-card { background: rgba(255,255,255,0.03); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); text-align: center; }
+        .tech-card i { font-size: 2rem; color: var(--accent); margin-bottom: 15px; }
+        .tech-card h3 { margin-bottom: 10px; }
+        .tech-card p { font-size: 0.9rem; color: var(--text-dim); }
+
+        /* Deep Link Niche Grid (Internal Links Updated) */
+        .niche-section { padding: 80px 8%; background: #0a0c12; }
+        .niche-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
+        .niche-card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.05); padding: 40px; border-radius: 24px; transition: 0.4s; }
+        .niche-card:hover { border-color: var(--accent); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1); }
+        .niche-card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; display: block; }
+        .niche-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+        .niche-card p { font-size: 0.95rem; color: var(--text-dim); margin-bottom: 20px; }
+        .btn-link { color: var(--accent); text-decoration: none; font-weight: 700; display: inline-block; border-bottom: 1px solid transparent; transition: 0.3s; }
+        .btn-link:hover { border-bottom: 1px solid var(--accent); }
+
+        /* Technical Specs Section */
+        .specs-section { padding: 80px 8%; }
+        .specs-container { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; }
+        .spec-item { text-align: center; max-width: 200px; }
+        .spec-item h2 { font-size: 2.5rem; color: var(--accent); }
+        .spec-item p { font-size: 0.9rem; color: var(--text-dim); }
+
+        /* FAQs */
+        .faq-section { padding: 80px 8%; max-width: 900px; margin: 0 auto; }
+        .faq-item { background: var(--card-bg); margin-bottom: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
+        .faq-question { padding: 22px; cursor: pointer; display: flex; justify-content: space-between; font-weight: 600; }
+        .faq-answer { padding: 0 22px; max-height: 0; overflow: hidden; transition: 0.3s; color: var(--text-dim); }
+
+        footer { padding: 40px 8%; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-dim); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="logo"><i class="fas fa-robot"></i> Freelancing<span>Vibes</span></a>
+        <nav><a href="/" style="color: var(--text-dim); text-decoration: none; font-weight: 600;">Back to Home</a></nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <a href="/">Home</a> > AI Voice Calling
+    </div>
+
+    <main>
+        <section class="hero">
+            <div style="background: rgba(0,242,255,0.1); border: 1px solid var(--accent); color: var(--accent); padding: 5px 15px; border-radius: 50px; display: inline-block; font-size: 0.8rem; margin-bottom: 20px; font-weight: 700;">Zero Latency AI Technology</div>
+            <h1><span>Human-Like AI Agents</span> That Talk, Listen, and Close Deals.</h1>
+            <p>Deploy intelligent voice bots that handle outbound prospecting and inbound inquiries with empathy and 24/7 precision.</p>
+        </section>
+
+        <!-- Technology Breakdown -->
+        <section class="tech-grid">
+            <div class="tech-card">
+                <i class="fas fa-microphone-alt"></i>
+                <h3>Custom Voice Setup</h3>
+                <p>Choose from professional neural voices with human-like inflections and tones.</p>
+            </div>
+            <div class="tech-card">
+                <i class="fas fa-brain"></i>
+                <h3>Knowledge Training</h3>
+                <p>We train the AI on your business data, scripts, and specific objection-handling rules.</p>
+            </div>
+            <div class="tech-card">
+                <i class="fas fa-database"></i>
+                <h3>Direct CRM Sync</h3>
+                <p>Every lead and conversation is instantly pushed to your HubSpot, Salesforce, or GHL.</p>
+            </div>
+        </section>
+
+        <!-- Deep Link Niche Grid (Links UPDATED based on your GitHub files) -->
+        <section class="niche-section">
+            <div style="text-align: center; margin-bottom: 30px;"><h2>Industry-Specific Solutions</h2></div>
+            <div class="niche-grid">
+                
+                <!-- Card 1: Real Estate -->
+                <div class="niche-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Real Estate Agent</h3>
+                    <p>Automated cold outreach for property listings and qualifying property sellers instantly.</p>
+                    <a href="https://aiagent.freelancingvibes.online/ai-voice-calling/real-estate.html" class="btn-link">
+Explore Real Estate AI Agent
+</a>
+
+                </div>
+
+                <!-- Card 2: Healthcare -->
+                <div class="niche-card">
+                    <i class="fas fa-tooth"></i>
+                    <h3>Healthcare & Dental</h3>
+                    <p>Automate patient appointments, follow-ups, and dental inquiries 24/7 with ease.</p>
+                    <a href="https://aiagent.freelancingvibes.online/ai-voice-calling/dental-healthcare.html" class="btn-link">
+See Dental AI Bot
+</a>
+
+                </div>
+
+                <!-- Card 3: Coaching & Education -->
+                <div class="niche-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Coaching & Education</h3>
+                    <p>Convert course inquiries into enrollments instantly with personalized voice follow-ups.</p>
+                    <a href="https://aiagent.freelancingvibes.online/ai-voice-calling/coaching-education.html" class="btn-link">
+Explore Coaching AI
+</a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Technical Specs -->
+        <section class="specs-section">
+            <div class="specs-container">
+                <div class="spec-item"><h2><500ms</h2><p>Ultra-Low Latency</p></div>
+                <div class="spec-item"><h2>50+</h2><p>Languages Supported</p></div>
+                <div class="spec-item"><h2>AI</h2><p>Emotion Detection</p></div>
+                <div class="spec-item"><h2>24/7</h2><p>No Human Downtime</p></div>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section class="faq-section" id="faq">
+            <div style="text-align: center; margin-bottom: 40px;"><h2>Voice AI FAQs</h2></div>
+            <div class="faq-item">
+                <div class="faq-question">Does the AI sound robotic? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer"><p style="padding-bottom: 20px; padding-left: 22px; padding-right: 22px;">No, we use advanced neural voice technology from providers like ElevenLabs, which ensures natural breathing, pauses, and tone.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can it handle angry customers? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer"><p style="padding-bottom: 20px; padding-left: 22px; padding-right: 22px;">Yes. With built-in Emotion Detection, the AI can detect frustration and immediately switch to an empathetic tone or transfer the call.</p></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FreelancingVibes.online | Specialized AI Voice Systems</p>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const icon = item.querySelector('i');
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    icon.classList.replace('fa-minus', 'fa-plus');
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    icon.classList.replace('fa-plus', 'fa-minus');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
