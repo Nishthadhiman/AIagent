@@ -1,1 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate AI Automation | Professional AI Agents for Brokers</title>
+    <meta name="description" content="Scale your real estate business with our specialized AI agents for Voice Calling, Email Outreach, SEO Analysis, and Backlink Finding.">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <style>
+        :root {
+            --bg-color: #05070a;
+            --card-bg: #0f1117;
+            --accent-color: #00f2ff;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+            --gradient: linear-gradient(135deg, #00f2ff 0%, #007bff 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-main); 
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            padding: 20px 8%;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(5, 7, 10, 0.9); backdrop-filter: blur(12px);
+            position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: white; }
+        .logo span { color: var(--accent-color); }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 8% 60px; text-align: center;
+            background: radial-gradient(circle at top right, rgba(0, 242, 255, 0.1), transparent);
+        }
+        .badge {
+            background: rgba(0, 242, 255, 0.1); border: 1px solid var(--accent-color);
+            color: var(--accent-color); padding: 6px 16px; border-radius: 50px;
+            font-size: 0.8rem; font-weight: 600; margin-bottom: 20px; display: inline-block;
+        }
+        .hero h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 20px; }
+        .hero h1 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { color: var(--text-dim); font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px; }
+
+        .btn-main { background: var(--gradient); color: #000; padding: 15px 35px; border-radius: 12px; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
+        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 242, 255, 0.2); }
+
+        /* 4 Agents Grid */
+        .agents-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 60px 8%; }
+        .agent-card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; transition: 0.4s; }
+        .agent-card:hover { border-color: var(--accent-color); transform: translateY(-5px); }
+        .agent-card i { font-size: 2.2rem; color: var(--accent-color); margin-bottom: 20px; display: block; }
+        .agent-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
+        .agent-card p { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 20px; }
+
+        /* Contact Form Section */
+        .contact-section { padding: 80px 8%; background: #0a0c12; }
+        .contact-container { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+        .contact-text h2 { font-size: 2.2rem; margin-bottom: 20px; color: var(--accent-color); }
+        .contact-text p { color: var(--text-dim); margin-bottom: 25px; }
+        
+        .lead-form { background: var(--card-bg); padding: 35px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text-dim); font-size: 0.85rem; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px; color: white; outline: none; font-family: inherit;
+        }
+
+        footer { padding: 40px 8%; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-dim); font-size: 0.8rem; }
+
+        @media (max-width: 850px) { .contact-container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="logo"><i class="fas fa-robot"></i> Freelancing<span>Vibes</span></a>
+        <nav>
+            <a href="#contact" class="btn-main" style="padding: 10px 20px; font-size: 0.8rem;">Hire Agent</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="badge">Specialized Real Estate AI Workforce</div>
+            <h1>Scale Your Brokerage with <span>Autonomous AI Agents</span></h1>
+            <p>High-ticket automation for real estate brokers. We handle your calling, follow-ups, and SEO ranking while you focus on closing property deals.</p>
+            <a href="#contact" class="btn-main">Get Your Custom AI Agent</a>
+        </section>
+
+        <!-- The 4 Specific Agents Grid -->
+        <section class="agents-grid" id="agents">
+            <div class="agent-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>AI Voice Calling</h3>
+                <p>Human-like voice bots for cold outreach and automated follow-ups. Perfect for daily lead qualification.</p>
+            </div>
+
+            <div class="agent-card">
+                <i class="fas fa-envelope-open-text"></i>
+                <h3>Email Outreach AI</h3>
+                <p>Niche-based scraping and personalized automated email sequences to nurture your property leads.</p>
+            </div>
+
+            <div class="agent-card">
+                <i class="fas fa-bullseye"></i>
+                <h3>SEO Competitor Bot</h3>
+                <p>Data-driven strategies to outrank competitors using technical AI analysis and ranking reports.</p>
+            </div>
+
+            <div class="agent-card">
+                <i class="fas fa-link"></i>
+                <h3>Backlink Finder AI</h3>
+                <p>Identify high-authority guest post opportunities and perform deep competitor auditing in real-time.</p>
+            </div>
+        </section>
+
+        <!-- LEAD FORM SECTION -->
+        <section class="contact-section" id="contact">
+            <div class="contact-container">
+                <div class="contact-text">
+                    <h2>Hire Your AI Employee</h2>
+                    <p>Stop wasting time on manual outreach. Our specialized AI agents work 24/7 to bring you high-ticket clients.</p>
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <div style="display: flex; align-items: center; gap: 12px;"><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> Direct Cold Calling Bots</div>
+                        <div style="display: flex; align-items: center; gap: 12px;"><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> Automatic Email Nurturing</div>
+                        <div style="display: flex; align-items: center; gap: 12px;"><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> Competitor SEO Audits</div>
+                    </div>
+                </div>
+
+                <div class="lead-form">
+                    <form action="#">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Business Email</label>
+                            <input type="email" placeholder="email@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Which Agent do you need?</label>
+                            <select required>
+                                <option value="" disabled selected>Select an AI Agent</option>
+                                <option value="voice-calling">AI Voice Calling Agent</option>
+                                <option value="email-outreach">Email Outreach & Scraping AI</option>
+                                <option value="seo-bot">SEO Competitor Bot</option>
+                                <option value="backlink-finder">Backlink Finder AI</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Briefly describe your requirements</label>
+                            <textarea rows="3" placeholder="I need a bot for luxury property sales..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-main" style="width: 100%;">Book a Demo</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FreelancingVibes.online | Leading AI Automation Provider</p>
+    </footer>
+
+</body>
+</html>
