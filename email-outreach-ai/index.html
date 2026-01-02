@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Email Outreach AI | Niche-Based Lead Generation</title>
+    <meta name="description" content="Scale your cold outreach with AI agents. Specialized lead scraping and hyper-personalized email sequences for SaaS, Real Estate, and Agencies.">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #05070a;
+            --card-bg: #0f1117;
+            --accent: #00f2ff;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+            --gradient: linear-gradient(135deg, #00f2ff 0%, #007bff 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; }
+
+        header { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; background: rgba(5, 7, 10, 0.8); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .logo { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: white; }
+        .logo span { color: var(--accent); }
+        
+        .breadcrumbs { padding: 20px 8%; font-size: 0.85rem; color: var(--text-dim); }
+        .breadcrumbs a { color: var(--accent); text-decoration: none; }
+
+        /* Hero */
+        .hero { padding: 80px 8% 40px; text-align: center; }
+        .hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.1; margin-bottom: 25px; }
+        .hero h1 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { color: var(--text-dim); font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; }
+
+        /* Niche Grid */
+        .niche-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 0 8% 80px; }
+        .niche-card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; transition: 0.4s; }
+        .niche-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .niche-card i { font-size: 2rem; color: var(--accent); margin-bottom: 20px; display: block; }
+        .niche-card h3 { font-size: 1.3rem; margin-bottom: 10px; }
+        .niche-card p { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 15px; }
+        .btn-link { color: var(--accent); text-decoration: none; font-weight: 700; font-size: 0.85rem; }
+
+        /* Audit Section */
+        .audit-section { padding: 100px 8%; background: #0a0c12; border-top: 1px solid rgba(255,255,255,0.05); }
+        .audit-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+        .audit-text h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .contact-info a { color: var(--accent); text-decoration: none; font-weight: 600; display: block; margin-bottom: 10px; }
+        .fiverr-btn { display: inline-flex; align-items: center; gap: 10px; background: #1dbf73; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 10px; transition: 0.3s; }
+        .audit-form { background: var(--card-bg); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text-dim); font-size: 0.9rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: white; outline: none; }
+        .btn-submit { width: 100%; background: var(--gradient); color: #000; padding: 18px; border-radius: 10px; font-weight: 800; border: none; cursor: pointer; transition: 0.3s; }
+
+        /* FAQ Section */
+        .faq-section { padding: 100px 8%; max-width: 1000px; margin: 0 auto; }
+        .faq-section h2 { text-align: center; margin-bottom: 50px; font-size: 2.5rem; }
+        .faq-item { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.05); border-radius: 15px; margin-bottom: 15px; overflow: hidden; }
+        .faq-question { padding: 22px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.1rem; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: all 0.4s ease; background: rgba(255,255,255,0.01); }
+        .faq-answer-content { padding: 22px; color: var(--text-dim); line-height: 1.7; }
+        .faq-item.active { border-color: var(--accent); }
+        .faq-item.active .faq-answer { max-height: 500px; }
+
+        footer { padding: 40px 8%; text-align: center; color: var(--text-dim); border-top: 1px solid rgba(255,255,255,0.05); }
+        @media (max-width: 900px) { .audit-container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="logo"><i class="fas fa-robot"></i> Freelancing<span>Vibes</span></a>
+        <nav><a href="/" style="color: var(--text-dim); text-decoration: none; font-weight: 600;">Home</a></nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <a href="/">Home</a> > Email Outreach AI
+    </div>
+
+    <main>
+        <section class="hero">
+            <h1>Scale Your <span>Cold Email</span> with Neural Intelligence</h1>
+            <p>Deploy AI agents that scrape deep niche data and write hyper-personalized messages that land in the inbox, not the spam folder.</p>
+        </section>
+
+        <!-- Niche Grid -->
+        <section class="niche-grid">
+            <div class="niche-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>SaaS Companies</h3>
+                <a href="/email-outreach-ai/saas-lead-generation.html" class="btn-link">Explore SaaS Outreach</a>
+            </div>
+            <div class="niche-card">
+                <i class="fas fa-building"></i>
+                <h3>Real Estate</h3>
+                <a href="/email-outreach-ai/real-estate-email-automation.html" class="btn-link">Explore Real Estate</a>
+            </div>
+            <div class="niche-card">
+                <i class="fas fa-ad"></i>
+                <h3>Digital Agencies</h3>
+                <a href="/email-outreach-ai/marketing-agency-outreach.html" class="btn-link">Scale Your Agency</a>
+            </div>
+            <div class="niche-card">
+                <i class="fas fa-user-tie"></i>
+                <h3>Consulting & B2B</h3>
+                <a href="/email-outreach-ai/consulting-outreach-ai.html" class="btn-link">View Consulting AI</a>
+            </div>
+            <div class="niche-card">
+                <i class="fas fa-shopping-bag"></i>
+                <h3>E-commerce</h3>
+                <a href="/email-outreach-ai/ecommerce-recovery-ai.html" class="btn-link">Boost E-com Sales</a>
+            </div>
+            <div class="niche-card">
+                <i class="fas fa-tools"></i>
+                <h3>Local Services</h3>
+                <a href="/email-outreach-ai/local-service-outreach.html" class="btn-link">Explore Local AI</a>
+            </div>
+        </section>
+
+        <!-- AUDIT FORM -->
+        <section class="audit-section" id="audit">
+            <div class="audit-container">
+                <div class="audit-text">
+                    <h2>Free AI Outreach Audit</h2>
+                    <p>We'll show you exactly where you're losing money and landing in spam. <strong>No strings attached.</strong></p>
+                    <div class="contact-info">
+                        <a href="mailto:hello@freelancingvibes.online"><i class="fas fa-envelope"></i> hello@freelancingvibes.online</a>
+                    </div>
+                    <a href="https://www.fiverr.com/s/qD7Eq4V" target="_blank" class="fiverr-btn"><i class="fab fa-fiverr"></i> Order on Fiverr</a>
+                </div>
+                <div class="audit-form">
+                    <form>
+                        <div class="form-group"><label>Business Name</label><input type="text" required></div>
+                        <div class="form-group"><label>Work Email</label><input type="email" required></div>
+                        <div class="form-group"><label>What is your main outreach problem?</label><textarea rows="4"></textarea></div>
+                        <button type="submit" class="btn-submit">Fix My Outreach Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section (Keywords Integrated) -->
+        <section class="faq-section">
+            <h2>Outreach AI FAQs</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">What is AI-powered cold email outreach? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer"><div class="faq-answer-content">It is an automated system that uses AI agents to identify potential leads, scrape their data, and write 1-to-1 personalized emails based on their specific business needs, ensuring high conversion rates.</div></div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does niche-based lead scraping work? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer"><div class="faq-answer-content">Our bots scan platforms like LinkedIn, Google Maps, or property portals to find decision-makers within your specific niche, collecting verified emails and phone numbers.</div></div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do you ensure high email deliverability? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer"><div class="faq-answer-content">We use domain rotation and professional warm-up sequences. This ensures that your cold emails land in the primary inbox rather than being flagged as spam.</div></div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I automate follow-ups with n8n workflows? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer"><div class="faq-answer-content">Yes! We build custom n8n workflows that handle multi-step sequences. If a lead doesn't reply, the AI sends a strategic follow-up until a conversation starts.</div></div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is the lead scraping compliant with privacy laws? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer"><div class="faq-answer-content">We only scrape publicly available business data and follow ethical outreach practices to ensure compliance with global data protection regulations.</div></div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Why is neural personalization better than templates? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer"><div class="faq-answer-content">Standard templates feel like spam. Neural AI personalization reads the lead's website or profile and writes a unique hook that proves you’ve done your research.</div></div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can this system integrate with my CRM? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer"><div class="faq-answer-content">Absolutely. Using n8n, we push all interested leads and conversation history directly into HubSpot, Salesforce, or GoHighLevel.</div></div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What industries benefit most from AI outreach? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer"><div class="faq-answer-content">B2B SaaS, Digital Marketing Agencies, Real Estate Brokers, and B2B Consulting firms see the highest ROI from our automated outreach systems.</div></div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How many emails can the AI send daily? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer"><div class="faq-answer-content">While the system is highly scalable, we recommend starting with 50-100 highly targeted emails per day to maintain domain reputation and high quality.</div></div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you offer a custom strategy for my niche? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer"><div class="faq-answer-content">Yes. Every business is different. We build bespoke AI agents and workflows specifically designed for your unique target audience.</div></div>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>&copy; 2026 FreelancingVibes.online | Scalable Email Intelligence</p></footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const faqItem = item.parentElement;
+                faqItem.classList.toggle('active');
+                const icon = item.querySelector('i');
+                icon.classList.toggle('fa-plus');
+                icon.classList.toggle('fa-minus');
+            });
+        });
+    </script>
+</body>
+</html>
