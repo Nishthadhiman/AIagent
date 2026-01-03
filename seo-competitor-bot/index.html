@@ -1,1 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous SEO Competitor Bot | Outrank Your Rivals with AI</title>
+    <meta name="description" content="Deploy AI SEO agents to analyze keyword gaps, audit backlinks, and generate ranking strategies. Professional SEO automation for SaaS, E-com, and Agencies.">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <style>
+        :root {
+            --bg: #05070a;
+            --card-bg: #0f1117;
+            --accent: #00f2ff;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+            --gradient: linear-gradient(135deg, #00f2ff 0%, #007bff 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; }
+
+        header { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; background: rgba(5, 7, 10, 0.8); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .logo { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: white; }
+        .logo span { color: var(--accent); }
+        
+        .breadcrumbs { padding: 20px 8%; font-size: 0.85rem; color: var(--text-dim); }
+        .breadcrumbs a { color: var(--accent); text-decoration: none; }
+
+        /* Hero */
+        .hero { padding: 80px 8% 40px; text-align: center; }
+        .hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.1; margin-bottom: 25px; }
+        .hero h1 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { color: var(--text-dim); font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; }
+
+        /* Niche Grid */
+        .niche-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 0 8% 80px; }
+        .niche-card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.05); padding: 30px; border-radius: 24px; transition: 0.4s; }
+        .niche-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .niche-card i { font-size: 2.2rem; color: var(--accent); margin-bottom: 20px; display: block; }
+        .niche-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
+        .btn-link { color: var(--accent); text-decoration: none; font-weight: 700; font-size: 0.85rem; }
+
+        /* Audit Form Section */
+        .audit-section { padding: 100px 8%; background: #0a0c12; border-top: 1px solid rgba(255,255,255,0.05); }
+        .audit-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+        .audit-text h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .audit-text p { color: var(--text-dim); margin-bottom: 30px; font-size: 1.1rem; }
+        .fiverr-btn { display: inline-flex; align-items: center; gap: 10px; background: #1dbf73; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+        
+        .audit-form { background: var(--card-bg); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text-dim); font-size: 0.9rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: white; outline: none; transition: 0.3s; font-family: inherit; }
+        .btn-submit { width: 100%; background: var(--gradient); color: #000; padding: 18px; border-radius: 10px; font-weight: 800; border: none; cursor: pointer; transition: 0.3s; font-size: 1rem; }
+
+        /* FAQ */
+        .faq-section { padding: 80px 8%; max-width: 900px; margin: 0 auto; }
+        .faq-item { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.05); border-radius: 15px; margin-bottom: 15px; overflow: hidden; }
+        .faq-question { padding: 22px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: all 0.4s ease; }
+        .faq-answer-content { padding: 22px; color: var(--text-dim); line-height: 1.7; }
+        .faq-item.active .faq-answer { max-height: 500px; }
+
+        footer { padding: 40px 8%; text-align: center; color: var(--text-dim); border-top: 1px solid rgba(255,255,255,0.05); }
+        @media (max-width: 900px) { .audit-container { grid-template-columns: 1fr; text-align: center; } .audit-form { text-align: left; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="logo"><i class="fas fa-robot"></i> Freelancing<span>Vibes</span></a>
+        <nav><a href="/" style="color: var(--text-dim); text-decoration: none; font-weight: 600;">Home</a></nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <a href="/">Home</a> > SEO Competitor Bot
+    </div>
+
+    <main>
+        <section class="hero">
+            <h1>Stop Guessing. Start <span>Ranking</span> with AI.</h1>
+            <p>Deploy intelligent SEO agents that scan your competitors 24/7. Identify keyword gaps, audit backlink profiles, and generate data-backed content strategies automatically.</p>
+        </section>
+
+        <!-- 6 Specialized SEO Niches -->
+        <section class="niche-grid">
+            <div class="niche-card">
+                <i class="fas fa-rocket"></i>
+                <h3>SaaS SEO Analysis</h3>
+                <p>Beat other software brands by identifying their top-ranking landing pages and technical SEO hacks.</p>
+                <a href="/seo-competitor-bot/saas-seo-analysis.html" class="btn-link">Explore SaaS SEO</a>
+            </div>
+            <div class="niche-card">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>E-commerce SEO</h3>
+                <p>Analyze competitor product descriptions and category page structures to steal their organic traffic.</p>
+                <a href="/seo-competitor-bot/ecommerce-keyword-gap.html" class="btn-link">Explore E-com SEO</a>
+            </div>
+            <div class="niche-card">
+                <i class="fas fa-balance-scale"></i>
+                <h3>Law Firm SEO</h3>
+                <p>Dominate local search rankings by analyzing other law firms' GMB profiles and local citations.</p>
+                <a href="/seo-competitor-bot/law-firm-seo-automation.html" class="btn-link">Explore Legal SEO</a>
+            </div>
+            <div class="niche-card">
+                <i class="fas fa-hospital-user"></i>
+                <h3>Healthcare SEO</h3>
+                <p>Specialized E-E-A-T analysis for medical websites to ensure high authority and trust rankings.</p>
+                <a href="/seo-competitor-bot/healthcare-seo-audit.html" class="btn-link">Explore Medical SEO</a>
+            </div>
+            <div class="niche-card">
+                <i class="fas fa-home"></i>
+                <h3>Real Estate Ranking</h3>
+                <p>Outrank Zillow and local brokers for hyper-local keywords and neighborhood property guides.</p>
+                <a href="/seo-competitor-bot/real-estate-ranking-bot.html" class="btn-link">Explore Property SEO</a>
+            </div>
+            <div class="niche-card">
+                <i class="fas fa-users-cog"></i>
+                <h3>White-Label Agency</h3>
+                <p>Scale your SEO agency by providing automated, AI-generated competitor audits for your clients.</p>
+                <a href="/seo-competitor-bot/agency-white-label-seo.html" class="btn-link">Explore Agency SEO</a>
+            </div>
+        </section>
+
+        <!-- SEO AUDIT FORM -->
+        <section class="audit-section" id="audit">
+            <div class="audit-container">
+                <div class="audit-text">
+                    <h2>Get a Free AI SEO Competitor Audit</h2>
+                    <p>Give us your URL and your top competitor's URL. We'll show you exactly which keywords they're beating you on and how to take them back. <strong>No strings attached.</strong></p>
+                    <a href="https://www.fiverr.com/s/qD7Eq4V" target="_blank" class="fiverr-btn"><i class="fab fa-fiverr"></i> Order on Fiverr</a>
+                </div>
+                <div class="audit-form">
+                    <form>
+                        <div class="form-group"><label>Your Website URL</label><input type="text" placeholder="https://yourwebsite.com" required></div>
+                        <div class="form-group"><label>Competitor Website URL</label><input type="text" placeholder="https://competitor.com" required></div>
+                        <div class="form-group"><label>Main Goal</label><textarea rows="3" placeholder="I want to rank for 'best AI agents' in New York..."></textarea></div>
+                        <button type="submit" class="btn-submit">Audit My Competitors Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO FAQs -->
+        <section class="faq-section">
+            <h2 style="text-align: center; margin-bottom: 40px;">SEO Automation FAQs</h2>
+            <div class="faq-item">
+                <div class="faq-question">What is an AI SEO Competitor Bot? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer"><div class="faq-answer-content">It is an autonomous agent that uses data from SERPs to analyze why your competitors are ranking higher, focusing on their content quality, technical structure, and backlink profile.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can I automate keyword gap analysis? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer"><div class="faq-answer-content">Yes. Using n8n and AI, our bot identifies keywords that your competitors rank for but you don't, giving you a ready-to-use content roadmap.</div></div>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>&copy; 2026 FreelancingVibes.online | AI SEO Intelligence</p></footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const faqItem = item.parentElement;
+                faqItem.classList.toggle('active');
+                const icon = item.querySelector('i');
+                icon.classList.toggle('fa-plus');
+                icon.classList.toggle('fa-minus');
+            });
+        });
+    </script>
+    <a href="https://aiagent.freelancingvibes.online/" class="flex items-center gap-3 px-6 py-3 bg-gray-900/50 border border-white/10 rounded-xl hover:bg-purple-500/10 hover:border-purple-500/50 transition-all group">
+                <i data-lucide="graduation-cap" class="w-5 h-5 text-purple-500"></i>
+                <span class="text-sm font-medium text-gray-300 group-hover:text-white">Back to home page</span>
+            </a>
+</body>
+</html>
